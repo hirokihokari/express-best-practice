@@ -8,7 +8,7 @@ Running test(s)
 =============================
 EOF
 
-npm run test
+yarn run test
 ret=$?
 
 git stash pop -q
