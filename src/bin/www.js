@@ -5,7 +5,7 @@
 import debug from 'debug'
 import http from 'http'
 import app from '../app'
-import config from '../config'
+import { port } from '../config'
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -25,8 +25,7 @@ const normalizePort = val => {
 /**
  * Get port from environment and store in Express.
  */
-const port = normalizePort(config.port || '3000');
-app.set('port', port);
+app.set('port', normalizePort(port || '3000'))
 
 /**
  * Create HTTP server.
